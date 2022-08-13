@@ -4,6 +4,7 @@
   "projects": {
     "auth": "libs/auth",
     "data": "libs/data",
+    "demo": "apps/demo",
     "todos": "apps/todos"
   }
 }
