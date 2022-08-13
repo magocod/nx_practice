@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "demoapp": "packages/demoapp",
+    "demoweb": "packages/demoweb",
+    "demoweb-e2e": "packages/demoweb-e2e",
+    "hello-tsc": "packages/hello-tsc"
+  }
+}
