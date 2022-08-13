@@ -5,6 +5,9 @@
     "auth": "libs/auth",
     "data": "libs/data",
     "demo": "apps/demo",
-    "todos": "apps/todos"
+    "other": "apps/other",
+    "shared-util-formatting": "libs/shared/util-formatting",
+    "todos": "apps/todos",
+    "util-testing": "libs/util-testing"
   }
 }

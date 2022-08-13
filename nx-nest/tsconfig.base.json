@@ -16,7 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@nx-nest/auth": ["libs/auth/src/index.ts"],
-      "@nx-nest/data": ["libs/data/src/index.ts"]
+      "@nx-nest/data": ["libs/data/src/index.ts"],
+      "@nx-nest/shared/util-formatting": [
+        "libs/shared/util-formatting/src/index.ts"
+      ],
+      "@nx-nest/util-testing": ["libs/util-testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
