@@ -4,12 +4,19 @@
  */
 
 import * as express from 'express';
+// import { dataHandler } from "./app/data";
 
-const app = express();
+import { appFactory } from './app.factory';
 
-app.get('/api', (req, res) => {
-  res.send({ message: 'Welcome to todos!' });
-});
+// export const app = express();
+
+// app.get('/', (req, res) => {
+//   res.json({ message: '...' });
+// });
+//
+// app.get('/data', dataHandler);
+
+export const app = appFactory();
 
 const port = process.env.port || 3333;
 const server = app.listen(port, () => {
