@@ -6,7 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "build:todos": "nx run todos:build",
-    "test": "nx test"
+    "test": "nx test",
+    "graph": "nx graph"
   },
   "private": true,
   "dependencies": {
