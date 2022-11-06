@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-mono/src",
+  "monorepo": true,
+  "root": "apps/nest-mono",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nest-mono/tsconfig.app.json"
+  },
+  "projects": {
+    "nest-mono": {
+      "type": "application",
+      "root": "apps/nest-mono",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-mono/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-mono/tsconfig.app.json"
+      }
+    },
+    "my-app": {
+      "type": "application",
+      "root": "apps/my-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-app/tsconfig.app.json"
+      }
+    },
+    "my-library": {
+      "type": "library",
+      "root": "libs/my-library",
+      "entryFile": "index",
+      "sourceRoot": "libs/my-library/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/my-library/tsconfig.lib.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "my-ms": {
+      "type": "application",
+      "root": "apps/my-ms",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-ms/tsconfig.app.json"
+      }
+    },
+    "utils-ms": {
+      "type": "library",
+      "root": "libs/utils-ms",
+      "entryFile": "index",
+      "sourceRoot": "libs/utils-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/utils-ms/tsconfig.lib.json"
+      }
+    },
+    "redis-ms": {
+      "type": "application",
+      "root": "apps/redis-ms",
+      "entryFile": "main",
+      "sourceRoot": "apps/redis-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/redis-ms/tsconfig.app.json"
+      }
+    }
+  }
+}
