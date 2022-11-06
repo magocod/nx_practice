@@ -9,7 +9,7 @@ import {
   redisCmdGreetingPattern,
   RedisCmdGreetingData, RedisCmdGreetingResult, RedisMsEvents, RedisEventCreatedData
 } from "@app/utils-ms";
-import {lastValueFrom} from "rxjs";
+import {lastValueFrom, timeout} from "rxjs";
 
 @Injectable()
 export class MyAppService {
@@ -30,14 +30,17 @@ export class MyAppService {
     const payload = [1, 2, 3];
     const v = await lastValueFrom(
       this.client.send<CmdSumResult, CmdSumData>(pattern, payload)
+        .pipe(timeout(5000))
     );
     console.log('microservice rs', v)
 
+    let r = '0';
+
     console.log('call microservice redis')
-    const r = await lastValueFrom(
+    r = await lastValueFrom(
       this.redisMsClient.send<RedisCmdGreetingData, RedisCmdGreetingResult>(
         redisCmdGreetingPattern, 'my-app'
-      )
+      ).pipe(timeout(5000))
     );
     console.log('microservice redis', r)
 
