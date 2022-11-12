@@ -71,6 +71,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/redis-ms/tsconfig.app.json"
       }
+    },
+    "rabbit-ms": {
+      "type": "application",
+      "root": "apps/rabbit-ms",
+      "entryFile": "main",
+      "sourceRoot": "apps/rabbit-ms/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rabbit-ms/tsconfig.app.json"
+      }
     }
   }
 }
